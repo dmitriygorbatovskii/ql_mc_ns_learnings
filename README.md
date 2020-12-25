@@ -1,57 +1,19 @@
-# Python API for LGSVL Simulator
+Скачивание и запуск симулятора
 
-This folder contains Python API for LGSVL Simulator.
+Для запуска обучения необходимы симулятор lgsvl, доступный на официальном сайте https://www.lgsvlsimulator.com и на github: https://github.com/lgsvl/simulator.
 
-# Usage
+Python API с обученными весами доступен в этом репозитории. После клонирования репозитория выполните следующие действия:
+1.Выполните следующую команду, чтобы установить файлы Python и необходимые зависимости:
+pip3 install --user -e .
+2.Теперь запустите симулятор (либо двоичный файл .exe, либо из редактора Unity). Симулятор по умолчанию прослушивает подключения на порту 8181 на локальном хосте.
+3.Нажмите Open Browserкнопку, чтобы открыть пользовательский интерфейс симулятора.
+4.После загрузки карт и транспортных средств по умолчанию перейдите на Simulationsвкладку.
+5.Создайте новую симуляцию. Дайте ему имя и отметьте API Onlyопцию. Щелкните Submit.
+6.Выберите только что созданное моделирование и нажмите кнопку «Воспроизвести» в правом нижнем углу.
+7.Выполните следующий пример, чтобы увидеть API в действии:
 
-Look into `quickstart` folder for simple usages.
-To run these examples first start the simulator and leave it in main menu.
-By default examples connect to Simulator on `localhost` address.
-To change it, adjust first argument of `Simulator` constructor, or set up
-`SIMULATOR_HOST` environment variable with hostname.
 
-# Documentation
+  
 
-Documentation is available on our website: https://www.lgsvlsimulator.com/docs/python-api/
 
-# Requirements
 
-* Python 3.5 or higher
-
-# Installing
-
-    pip3 install --user .
-
-    # install in development mode
-    pip3 install --user -e .
-
-# Running unit tests
-
-    # run all unittests
-    python3 -m unittest discover -v -c
-
-    # run single test module
-    python3 -m unittest -v -c tests/test_XXXX.py
-
-    # run individual test case
-    python3 -m unittest -v tests.test_XXX.TestCaseXXX.test_XXX
-    python3 -m unittest -v tests.test_Simulator.TestSimulator.test_unload_scene
-
-# Creating test coverage report
-
-    # (one time only) install coverage.py
-    pip3 install --user coverage
-
-    # run all tests with coverage
-    ~/.local/bin/coverage run -m unittest discover
-
-    # generate html report
-    ~/.local/bin/coverage html --omit "~/.local/*","tests/*"
-
-    # output is in htmlcov/index.html
-
-# Copyright and License
-
-Copyright (c) 2018-2020 LG Electronics, Inc.
-
-This software contains code licensed as described in LICENSE.
